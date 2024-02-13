@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --font-family: 'Red Hat Display', sans-serif;
+    --color-title: #233254;
+    --color-p: #999eb3;
+    --background-color-button-opc: #f8f9fe;
+    --color-href: #382ba9;
+    --color-animation: #736bf1;
+    --background-colo-button: #382ae1;
+    --color-hover-button: #22304c;
+}
+
+
+body{
+    box-sizing: border-box;
+    background-image: url("../img/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-color: #dfe8fe;
+    font-family: var(--font-family);
+}
+
+.main{
+    align-items: center;
+    text-align: center;
+}
+
+.main-section-picture{
+    height: auto;
+    border: none;
+}
+
+.main-section{
+    position: absolute;
+    max-width: 450px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 1.3em;
+    overflow: hidden;
+}
+
+
+/*Aqui analisa o espaçamento dos objetos das paginas*/
+.section-description{
+    margin: 2.4em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.1em;
+    overflow: hidden;
+}
+
+.main-section-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.06em;
+}
+
+.main-section-title{
+    font-weight: 700;
+    font-size: 1.8em;
+    color: var(--color-title);
+}
+
+.main-section-p{
+    color: var(--color-p);
+    margin: 0em 0.8em 1em 0.8em;
+    line-height: 1.5;
+}
+
+.main-section-plan-section{
+    background-color: var(--background-color-button-opc);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 1.25em;
+    justify-content: space-around;
+}
+
+.plan-value{
+    margin-left: 1.4em;
+    display: flex;
+    align-items: center;
+    gap: 0.65em;
+}
+
+.plan-value-description{
+    margin-top: 1em;
+}
+
+.plan-value-tile{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.plan-value-money{
+    padding-top: 0.25em;
+    font-size: 1em;
+}
+
+
+.plan-value-change-description{
+    color: var(--color-href);
+    font-weight: bolder;
+}
+
+.plan-value-change-description:hover{
+    text-decoration: none;
+    color: var(--color-animation);
+}
+
+.main-section-button{
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.section-button-animation{
+    background-color: var(--background-colo-button);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.93em;
+    border-radius: 0.75em;
+}
+
+.section-button-animation:hover{
+    background-color: var(--color-animation);
+    cursor: pointer;
+}
+
+.button-animation-opacity{
+    padding-top: 0.7em;
+    background-color: none;
+    text-decoration: none;
+    color: var(--color-p);
+    font-weight: bold;
+}
+
+.button-animation-opacity:hover{
+    cursor: pointer;
+    color: var(--color-hover-button);
+}
+
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1em;
+}
+
+.footer-text{
+    text-align: center;
+    font-size: 0.8em;
+}
+
+@media (max-width: 414px){
+    body{
+        background-image: url("../img/pattern-background-mobile.svg");
+    }
+    .main-section{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+    }
+    .plan-value-change-description{
+       margin-right: 0.9em;
+    }
+}
